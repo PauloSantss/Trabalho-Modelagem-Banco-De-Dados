@@ -9,12 +9,14 @@ primeira versão do sistema prioriza o controle de produtos, estoque,
 compras, vendas e cadastros auxiliares. O controle de ordens de serviço
 de manutenção poderá ser considerado em uma etapa futura.
 
-                     Integrantes
                      
 - Paulo Henrique Oliveira dos Santos --- RGM: 47848430
-- 
+
+ 
 Entrega 1 --- Modelo Conceitual
+
 1. Caracterização da Organização
+
 Nome e natureza da organização
 A GCaccessories é uma loja que atua no comércio de acessórios para
 celulares e computadores. Seu catálogo pode incluir produtos utilizados
