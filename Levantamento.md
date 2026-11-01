@@ -277,22 +277,7 @@ As evidências complementares, como fotografias autorizadas e outros registros r
 
 **Observação:** não foi realizada observação presencial das atividades internas da empresa, pois a entrevista ocorreu fora de suas dependências.
 
-## 10. Pontos que ainda precisam de confirmação
-
-Algumas informações precisam ser detalhadas antes da definição final do modelo do banco de dados:
-
-- Quais são exatamente as condições e os prazos de garantia dos serviços de assistência técnica?
-- Em qual momento o estoque deve ser atualizado durante uma venda?
-- Em qual momento as peças utilizadas em uma ordem de serviço devem ser retiradas do estoque?
-- Como devem ser registradas as vendas canceladas e as ordens de serviço canceladas?
-- Como será realizado o controle de peças reservadas para determinadas ordens de serviço?
-- Quais informações adicionais devem ser registradas em cada fechamento de caixa?
-- O proprietário autoriza a divulgação de seus dados de contato no relatório acadêmico?
-- Quais fotografias da empresa podem ser utilizadas como evidências no trabalho
-
-Esses pontos serão considerados durante a elaboração e validação do modelo conceitual e lógico.
-
-## 11. Conclusão do levantamento
+## 10. Conclusão do levantamento
 
 O levantamento permitiu compreender as principais atividades da GCaccessories, incluindo o comércio de acessórios e peças, o controle de estoque, as compras, as vendas e os serviços de assistência técnica.
 
@@ -300,7 +285,7 @@ A entrevista também possibilitou identificar as principais necessidades da empr
 
 Com base nas informações obtidas, será possível elaborar o modelo conceitual do banco de dados, identificar as entidades e seus relacionamentos e, posteriormente, desenvolver o modelo lógico e a implementação em MySQL.
 
-## 12. Utilização de Inteligência Artificial no levantamento de requisitos
+## 11. Utilização de Inteligência Artificial no levantamento de requisitos
 
 Durante a preparação do levantamento de requisitos da GCaccessories, foi utilizada a ferramenta ChatGPT, desenvolvida pela OpenAI, como apoio na elaboração das perguntas para a entrevista com o responsável pela empresa.
 
@@ -308,19 +293,19 @@ A ferramenta foi utilizada com o objetivo de sugerir perguntas que ajudassem a c
 
 A maior parte das perguntas utilizadas na preparação da entrevista foi elaborada com o auxílio da Inteligência Artificial. As sugestões foram utilizadas como referência e adaptadas conforme a necessidade do levantamento.
 
-### 12.1. Ferramenta utilizada
+### 11.1. Ferramenta utilizada
 
 - **Ferramenta:** ChatGPT.
 - **Desenvolvedor:** OpenAI.
 - **Finalidade:** Auxiliar na elaboração de perguntas para a entrevista e orientar a identificação dos requisitos do sistema.
 
-### 12.2. Prompt utilizado
+### 11.2. Prompt utilizado
 
 O prompt enviado à ferramenta foi:
 
 > Vou entrevistar uma empresa que vende acesorios tecnologicos e que faz assistencias tecnicas com o intuito de criar um banco de dados para o sistema da empresa para que possa ser ultilizado no dia a dia. Me envie 10 Perguntas que podem ser ultilizadas nessa entrevista para que eu possa levantar requisitos e identificar entidades, Regras de negocios e que me ajude a criar diagramas para o projeto tambem.
 
-### 12.3. Exemplos de perguntas utilizadas na entrevista
+### 11.3. Exemplos de perguntas utilizadas na entrevista
 
 Entre as perguntas utilizadas com o auxílio da ferramenta, destacam-se:
 
@@ -349,7 +334,7 @@ Entre as perguntas utilizadas com o auxílio da ferramenta, destacam-se:
 - **Pergunta 14:** Quais relatórios ou consultas você precisa ver com frequência (vendas por período, estoque baixo, ordens em aberto, desempenho por técnico, lucro)?
 - **Pergunta 15:** Hoje como as informações são controladas (papel, planilha, outro sistema)? Quais são os maiores problemas e o que você gostaria que o novo sistema resolvesse, incluindo possíveis necessidades futuras como venda online ou mais de uma unidade?
 
-### 12.4. Validação e responsabilidade sobre as informações
+### 11.4. Validação e responsabilidade sobre as informações
 
 As perguntas sugeridas pela Inteligência Artificial serviram como apoio para a preparação e realização da entrevista. Entretanto, as informações sobre o funcionamento da GCaccessories foram obtidas por meio das respostas fornecidas pelo responsável pela empresa.
 
