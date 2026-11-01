@@ -108,8 +108,6 @@ Quando o reparo é autorizado e executado, o pagamento é devido.
 
 A garantia das peças segue os prazos e as condições estabelecidos pelos respectivos fabricantes.
 
-As condições específicas de garantia dos serviços ainda precisam ser detalhadas com o responsável pela empresa.
-
 ### 4.5. Produtos e estoque
 
 Os produtos são organizados por categorias, marcas e códigos internos.
