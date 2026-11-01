@@ -30,7 +30,7 @@ As informações obtidas foram utilizadas para compreender os processos da empre
 
 O documento completo do levantamento está disponível em:
 
-`levantamento.md`
+`Levantamento.md`
 
 ### 3.1. Características operacionais
 
