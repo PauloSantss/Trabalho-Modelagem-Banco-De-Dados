@@ -2,7 +2,7 @@
 
 ## 1. Identificação do projeto
 
-| Informação | Descrição |
+| INF | Descrição |
 |---|---|
 | Nome do projeto | GCaccessories |
 | Área de atuação | Comércio de acessórios e peças e assistência técnica em celulares e computadores |
