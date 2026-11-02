@@ -7,9 +7,6 @@
 | Nome do projeto | GCaccessories |
 | Área de atuação | Comércio de acessórios e peças e assistência técnica em celulares e computadores |
 | Localização | Jardim Caçula, Ribeirão Pires — SP |
-| Responsável pelo levantamento | Paulo Henrique Oliveira dos Santos |
-| Entrevistado | Proprietário da empresa |
-| Data da entrevista | 18/09/2026 |
 
 ## 2. Apresentação da empresa
 
