@@ -1,0 +1,212 @@
+# Modelo Lógico — GCaccessories
+
+**Projeto:** Sistema de Gerenciamento de Loja de Acessórios para Celulares  
+**Banco de dados:** MySQL 8.0  
+**Etapa:** Modelo Lógico — Versão para revisão
+
+## 1. Legenda
+
+- **PK (Primary Key):** chave primária, identifica cada registro da tabela.
+- **FK (Foreign Key):** chave estrangeira, estabelece relacionamento entre tabelas.
+- **NN (NOT NULL):** campo de preenchimento obrigatório.
+- **NULL:** campo que pode ficar sem preenchimento.
+
+## 2. Estrutura das tabelas
+
+### 2.1 CLIENTE
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_cliente | INT | PK |
+| nome | VARCHAR(150) | NN |
+| telefone | VARCHAR(20) | NULL |
+
+### 2.2 FUNCIONARIO
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_funcionario | INT | PK |
+| nome | VARCHAR(150) | NN |
+| cpf | VARCHAR(14) | NULL |
+| telefone | VARCHAR(20) | NULL |
+| cargo | VARCHAR(80) | NULL |
+
+### 2.3 FORNECEDOR
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_fornecedor | INT | PK |
+| nome | VARCHAR(150) | NN |
+| telefone | VARCHAR(20) | NULL |
+| email | VARCHAR(150) | NULL |
+| endereco | VARCHAR(255) | NULL |
+
+### 2.4 CATEGORIA
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_categoria | INT | PK |
+| nome | VARCHAR(100) | NN |
+| descricao | VARCHAR(255) | NULL |
+
+### 2.5 MARCA
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_marca | INT | PK |
+| nome | VARCHAR(100) | NN |
+
+### 2.6 MODELO_CELULAR
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_modelo | INT | PK |
+| fabricante | VARCHAR(100) | NULL |
+| nome_modelo | VARCHAR(100) | NN |
+
+### 2.7 PRODUTO
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_produto | INT | PK |
+| nome | VARCHAR(150) | NN |
+| codigo_barras | VARCHAR(50) | NULL |
+| descricao | VARCHAR(255) | NULL |
+| cor | VARCHAR(50) | NULL |
+| preco_custo | DECIMAL(10,2) | NULL |
+| preco_venda | DECIMAL(10,2) | NN |
+| quantidade_estoque | INT | NN |
+| estoque_minimo | INT | NN |
+| id_categoria | INT | FK |
+| id_marca | INT | FK |
+| id_modelo | INT | FK |
+
+### 2.8 MOVIMENTACAO_ESTOQUE
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_movimentacao | INT | PK |
+| tipo_movimentacao | VARCHAR(30) | NN |
+| quantidade | INT | NN |
+| data_movimentacao | DATETIME | NN |
+| motivo | VARCHAR(255) | NULL |
+| id_produto | INT | FK |
+| id_funcionario | INT | FK |
+
+### 2.9 COMPRA
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_compra | INT | PK |
+| data_compra | DATETIME | NN |
+| valor_total | DECIMAL(10,2) | NN |
+| id_fornecedor | INT | FK |
+| id_funcionario | INT | FK |
+
+### 2.10 ITEM_COMPRA
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_item_compra | INT | PK |
+| quantidade | INT | NN |
+| preco_unitario | DECIMAL(10,2) | NN |
+| subtotal | DECIMAL(10,2) | NN |
+| id_compra | INT | FK |
+| id_produto | INT | FK |
+
+### 2.11 VENDA
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_venda | INT | PK |
+| data_venda | DATETIME | NN |
+| valor_total | DECIMAL(10,2) | NN |
+| id_funcionario | INT | FK |
+| id_cliente | INT | FK, NULL permitido |
+
+O cliente é opcional porque a loja também realiza vendas diretamente no balcão, sem exigir cadastro.
+
+### 2.12 ITEM_VENDA
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_item_venda | INT | PK |
+| quantidade | INT | NN |
+| preco_unitario | DECIMAL(10,2) | NN |
+| subtotal | DECIMAL(10,2) | NN |
+| id_venda | INT | FK |
+| id_produto | INT | FK |
+
+### 2.13 PAGAMENTO
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_pagamento | INT | PK |
+| forma_pagamento | VARCHAR(50) | NN |
+| valor | DECIMAL(10,2) | NN |
+| data_pagamento | DATETIME | NN |
+| id_venda | INT | FK |
+
+Uma venda pode possuir um ou mais registros de pagamento, permitindo dividir o pagamento entre diferentes formas.
+
+### 2.14 APARELHO
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_aparelho | INT | PK |
+| fabricante | VARCHAR(100) | NULL |
+| modelo | VARCHAR(100) | NULL |
+| identificacao | VARCHAR(100) | NULL |
+| id_cliente | INT | FK |
+
+### 2.15 ORDEM_SERVICO
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_os | INT | PK |
+| data_abertura | DATETIME | NN |
+| defeito_relatado | VARCHAR(255) | NN |
+| diagnostico | VARCHAR(255) | NULL |
+| valor_orcamento | DECIMAL(10,2) | NULL |
+| status | VARCHAR(50) | NN |
+| id_aparelho | INT | FK |
+| id_funcionario | INT | FK |
+
+### 2.16 FECHAMENTO_CAIXA
+
+| Atributo | Tipo de dado | Restrição |
+|---|---|---|
+| id_fechamento | INT | PK |
+| data_fechamento | DATETIME | NN |
+| valor_dinheiro | DECIMAL(10,2) | NULL |
+| valor_pix | DECIMAL(10,2) | NULL |
+| valor_cartao | DECIMAL(10,2) | NULL |
+| valor_fisico_caixa | DECIMAL(10,2) | NULL |
+| id_funcionario | INT | FK |
+
+## 3. Relacionamentos entre as tabelas
+
+| Tabela de origem | Tabela relacionada | Cardinalidade |
+|---|---|---|
+| CATEGORIA | PRODUTO | 1:N |
+| MARCA | PRODUTO | 1:N |
+| MODELO_CELULAR | PRODUTO | 1:N |
+| FORNECEDOR | COMPRA | 1:N |
+| FUNCIONARIO | COMPRA | 1:N |
+| COMPRA | ITEM_COMPRA | 1:N |
+| PRODUTO | ITEM_COMPRA | 1:N |
+| FUNCIONARIO | VENDA | 1:N |
+| CLIENTE | VENDA | 1:N |
+| VENDA | ITEM_VENDA | 1:N |
+| PRODUTO | ITEM_VENDA | 1:N |
+| VENDA | PAGAMENTO | 1:N |
+| CLIENTE | APARELHO | 1:N |
+| APARELHO | ORDEM_SERVICO | 1:N |
+| FUNCIONARIO | ORDEM_SERVICO | 1:N |
+| PRODUTO | MOVIMENTACAO_ESTOQUE | 1:N |
+| FUNCIONARIO | MOVIMENTACAO_ESTOQUE | 1:N |
+| FUNCIONARIO | FECHAMENTO_CAIXA | 1:N |
+
+## 4. Considerações finais
+
+O modelo lógico organiza os dados necessários para o funcionamento do sistema GCaccessories, permitindo o gerenciamento de clientes, funcionários, fornecedores, produtos, compras, vendas, pagamentos, estoque, assistência técnica e fechamento de caixa.
