@@ -2,7 +2,7 @@
 
 ## 1. Identificação da empresa
 
-|    Inf             | Descrição                                                                        |
+|    Informação           | Descrição                                                                        |
 | ----------------------------- | -------------------------------------------------------------------------------- |
 | Nome da empresa               | GCaccessories                                                                    |
 | Área de atuação               | Comércio de acessórios e peças e assistência técnica em celulares e computadores |
