@@ -10,7 +10,6 @@
 | Responsável pelo levantamento | Paulo Henrique Oliveira dos Santos |
 | Entrevistado | Proprietário da empresa |
 | Data da entrevista | 18/09/2026 |
-| SGBD | MySQL 8.0.46 |
 
 ## 2. Apresentação da empresa
 
