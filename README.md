@@ -5,6 +5,7 @@
 | INFORMAÇÃO| Descrição |
 |---|---|
 | Nome do projeto | GCaccessories |
+| integrantes | Paulo Henrique Oliveira dos Santos RGM:47848430 |
 | Área de atuação | Comércio de acessórios e peças e assistência técnica em celulares e computadores |
 | Localização | Jardim Caçula, Ribeirão Pires — SP |
 
