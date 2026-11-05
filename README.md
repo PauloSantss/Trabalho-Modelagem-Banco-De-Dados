@@ -10,7 +10,7 @@
 | João Victor Cipriano Bezerra | 48071277 | *(preencher)* |
 | Luis Angel Yana Poma | 50132229 | *(preencher)* |
 | Nicolas de Oliveira Batista Barsoti | 48030058 | *(preencher)* |
-| Paulo Henrique Oliveira dos Santos | 47848430 | *(preencher)* |
+| Paulo Henrique Oliveira dos Santos | 47848430 | *PauloSantss* |
 
 &nbsp;
 
